@@ -19,8 +19,8 @@ I will use this page to post about different pentesting methodologies, and some 
 | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
 | [How to setup Scorpio scoring engine for CyberPatriot Linux Images](_posts/2023-06-15-scorpio_linux_setup.md) | Setting up Scorpio using pip and pyconcrete |
 
-## 2024
+## 2025
 
 | Post                                                                                                       | Description                                 |
 | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
-| [HackTheBox CPTS Certification](_posts/2024-09-18-CPTS.md) | My journey to the HackTheBox CPTS Certification |
+| [Offensive Cybersecurity Certification Experience](_posts/2025-01-27-Offensive_Certifications.md) | My experience with HackTheBox and Zero Point Security Certifications |
