@@ -3,40 +3,17 @@ layout: default
 title: Home
 ---
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <article class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url | relative_url }}">
-        {{ post.title }}
-      </a>
-    </h1>
-
-    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date"
-      >{{ post.date | date_to_string }}</time
-    >
-
-    {{ post.content }}
-  </article>
-  {% endfor %}
-</div>
-
-<div class="pagination">
-  {% if paginator.next_page %}
-  <a
-    class="pagination-item older"
-    href="{{ paginator.next_page_path | relative_url }}"
-    >Older</a
-  >
-  {% else %}
-  <span class="pagination-item older">Older</span>
-  {% endif %} {% if paginator.previous_page %}
-  <a
-    class="pagination-item newer"
-    href="{{ paginator.previous_page_path | relative_url }}"
-    >Newer</a
-  >
-  {% else %}
-  <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
+<h1 class="text-center">Welcome to my website!</h1>
+<p class="message">
+  I will use this website to post my writeups projects, and posts.
+</p>
+<hr />
+<img src="/assets/wylecool.png" height="100" width="100">
+<h3 class="text-center">About me:</h3>
+<p class="text-center">Hi! My name is Jaden Wijata and I am currently in 12th grade. I go to school at Troy High School in California. My interests are mostly all cyber related things like pentesting or computer science. I compete in the ctf team <a href="https://ctftime.org/team/157027">wackers</a>. I am currently studying for the OSCP Certification.</p> 
+<p class="text-center">Thanks for visiting! Click on the links in the navigation bar to look through my website!</p>
+<h3 class="text-center">Contacts:</h3>
+<p class="text-center"><a href="https://github.com/xenonminer" rel="noreferrer noopener" target="_blank" title="GitHub">Github</a></p>
+<p class="text-center"><a href="https://www.linkedin.com/in/jaden-wijata/" rel="noreferrer noopener" target="_blank" title="LinkedIn">LinkedIn</a></p>
+<p class="text-center"><a href="mailto:jadenwijata@gmail.com" title="Email">Email</a></p>
+<p class="text-center">Discord: uvuvue</p>
