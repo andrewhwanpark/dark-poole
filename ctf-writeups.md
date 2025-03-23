@@ -27,3 +27,9 @@ title: CTF Writeups
 | CTF | Category |
 |---|---|
 | [sunshineCTF 2024](_posts/2024-10-21-sunshineCTF2024.md) | Pwn |
+
+## 2025
+
+| CTF | Category |
+|---|---|
+| [RITSEC CTF 2025](_posts/2025-03-23-RITSEC_CTF2025.md) | Forensics, Web, Pwn, Jail |
