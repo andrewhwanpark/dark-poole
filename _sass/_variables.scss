@@ -13,6 +13,7 @@
   --dark-poole-002: hsl(0, 0%, 85%);
   --dark-poole-link-color: rgba(255, 255, 255, 0.75);
   --dark-poole-link-hover: #fff;
+  --intro-text-color: rgb(204, 204, 204);
 
   --red: #fa5252;
   --pink: #e64980;
@@ -33,7 +34,7 @@
   --body-font: "Schibsted Grotesk", sans-serif;
   --body-font-size: 20px;
   --body-line-height: 1.5;
-  --body-color: var(--gray-700);
+  --body-color: #ccc;
   --body-bg: #fff;
 
   --link-color: var(--blue);
@@ -72,7 +73,7 @@
 
 // Dark Poole theme
 [data-theme="dark-poole"] {
-  --body-color: #fff;
+  --body-color: #ccc;
   --body-bg: #000;
   --heading-color: #fff;
   --link-color: #fff;

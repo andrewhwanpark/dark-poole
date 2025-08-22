@@ -2,7 +2,7 @@
 <html lang="en" data-theme="dark-poole">
   {% include head.html %}
 
-  <body>
+  <body class="{% if page.layout %}{{ page.layout }}{% endif %}{% if page.title %} {{ page.title | slugify }}{% endif %}">
     <header class="masthead">
       <div class="masthead-container">
         <div class="masthead-title-container">

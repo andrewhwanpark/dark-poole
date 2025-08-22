@@ -4,11 +4,21 @@
 html {
   scroll-snap-type: y mandatory;
   scroll-padding-top: 100px; // offset for fixed header
+  
+  // Adjust for taller header on small screens when stacked
+  @media (max-width: 480px) {
+    scroll-padding-top: 140px; // more space for stacked header
+  }
 }
 
 body {
   scroll-snap-type: y mandatory;
   scroll-padding-top: 100px; // same offset
+  
+  // Adjust for taller header on small screens when stacked
+  @media (max-width: 480px) {
+    scroll-padding-top: 140px; // more space for stacked header
+  }
 }
 
 // Introduction Section
@@ -34,25 +44,48 @@ body {
     line-height: 1.8;
     color: rgb(204, 204, 204);
     margin: 0;
-    text-align: left;
+    text-align: center;
   }
+}
+
+.main-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.small {
+  font-size: 16px;
+  display: inline;
+}
+
+
+.tiny {
+  font-size: 8px;
+  color: rgb(102, 102, 102);
+  display: inline;
+}
+
+.main-text-item {
+  color: rgb(255, 255, 255);
+  font-family: "Schibsted Grotesk:SemiBold", sans-serif;
+  //text-align: center !important;
 }
 
 // Resume container with scroll snapping
 .resume-container {
   min-height: 100vh;
   display: flex;
-  gap: 4rem;
   margin: 0 auto;
   color: #fff;
   background-color: #000;
   scroll-snap-align: start;
   scroll-snap-stop: always;
-  padding: 4rem 0;
 }
 
 .resume-sidebar {
-  flex: 0 0 300px;
   max-width: 1200px;
   margin: 0 auto;
   
@@ -251,21 +284,81 @@ body {
   background-color: #333;
 }
 
-// Responsive design
-@media (max-width: 768px) {
-  html, body {
-    scroll-padding-top: 100px;
-  }
+// Scroll down arrow - positioned within introduction section bounds
+.introduction-section {
+  position: relative;
+  overflow: hidden; // This will clip the arrow to this section
   
-  .introduction-section {
-    min-height: 100vh;
+  .scroll-arrow {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 100;
+    
+    // Center the arrow on mobile screens
+    @media (max-width: 480px) {
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
+    }
+    
+    span {
+      display: block;
+      font-size: 24px;
+      color: #fff;
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+      animation: bounce 2s infinite;
+      
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
-  
+}
+
+// Bounce animation for the arrow
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+// Default mobile-first approach - stack vertically by default
+.resume-container {
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.resume-sidebar {
+  flex: none;
+}
+
+// Only use horizontal layout on large screens (1200px+)
+@media (min-width: 1200px) {
   .resume-container {
-    min-height: 100vh;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 1rem;
+    flex-direction: row;
+    gap: 4rem;
+    padding: 4rem 0;
+  }
+  
+  .resume-sidebar {
+    flex: 0 0 300px;
+  }
+}
+
+// Mobile specific adjustments
+@media (max-width: 480px) {
+  .resume-container {
+    padding: 1rem 0;
+    gap: 1.5rem;
   }
   
   .introduction-content {
@@ -273,23 +366,5 @@ body {
       font-size: 1rem;
       line-height: 1.6;
     }
-  }
-  
-  .resume-sidebar {
-    flex: none;
-  }
-}
-
-@media (max-width: 480px) {
-  html, body {
-    scroll-padding-top: 100px;
-  }
-  
-  .introduction-section {
-    min-height: 100vh;
-  }
-  
-  .resume-container {
-    min-height: 100vh;
   }
 } 

@@ -5,8 +5,22 @@ layout: default
 <div class="introduction-section">
   <div class="introduction-content">
     <p class="intro-text">
-      Currently in Cornell, previously at Microsoft and Zamp.
+              
+      <div>
+        <div class="small">TL;DR </div>    
+          <p class="main-text">
+            <p class="main-text-item">One to Hundred.</p>
+            <p class="main-text-item">Solving problems with real impact.</p>
+            <p class="main-text-item">Build, break, ship and ship faster.</p>
+            <p class="main-text-item">Engineer, Operator, Builder.</p>
+          </p>
+      </div>
     </p>
+  </div>
+  
+  <!-- Scroll down arrow -->
+  <div class="scroll-arrow">
+    <span>↓</span>
   </div>
 </div>
 
@@ -16,7 +30,7 @@ layout: default
     <div class="personal-summary">
       <p>5+ years of experience working in professional software development across Big Tech and startups.</p>
       <br /> 
-      <p>AI Engineering in the past few years. Love integrating AI into everything.</p>
+      <p>I'm sort of like an "everything engineer". I can be cooking up a new experience today, rebuilding an analytics engine tomorrow and be working on the new AI product the next week. I learn on the job and I'm very quick to build.</p>
     </div>
     
     <hr class="separator">
@@ -80,3 +94,22 @@ layout: default
     </div>
   </div>
 </div>
+
+<script>
+// Hide scroll arrow when scrolling past introduction section
+window.addEventListener('scroll', function() {
+  const introSection = document.querySelector('.introduction-section');
+  const scrollArrow = document.querySelector('.scroll-arrow');
+  
+  if (introSection && scrollArrow) {
+    const introBottom = introSection.offsetTop + introSection.offsetHeight;
+    const scrollPosition = window.pageYOffset;
+    
+    if (scrollPosition > introBottom - window.innerHeight) {
+      scrollArrow.style.display = 'none';
+    } else {
+      scrollArrow.style.display = 'block';
+    }
+  }
+});
+</script>
