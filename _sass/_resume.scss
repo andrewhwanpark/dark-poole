@@ -110,6 +110,35 @@ body {
       box-sizing: border-box;
     }
   }
+
+  .badges {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    justify-content: space-between;
+    max-width: 100%;
+  }
+
+  .badge-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .badge {
+    width: 80px;
+    height: 80px;
+    padding: 0.25rem;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+
   
   .contact-info {
     .contact-item {
