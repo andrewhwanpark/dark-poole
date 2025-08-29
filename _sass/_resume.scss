@@ -192,17 +192,23 @@ body {
   }
 }
 
+.section-title {
+  font-family: "Schibsted Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 2rem;
+  margin-top: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
 .resume-main {
   flex: 1;
   
-  .section-title {
-    font-family: "Schibsted Grotesk", sans-serif;
-    font-weight: 600;
-    font-size: 24px;
-    color: #fff;
-    margin-bottom: 2rem;
-    margin-top: 0;
-  }
   
   .experience-item {
     margin-top: 2rem;
@@ -313,6 +319,10 @@ body {
   background-color: #333;
 }
 
+.gray {
+  color: #ccc;
+}
+
 // Scroll down arrow - positioned within introduction section bounds
 .introduction-section {
   position: relative;
@@ -376,10 +386,20 @@ body {
     flex-direction: row;
     gap: 4rem;
     padding: 4rem 0;
+    align-items: flex-start;
   }
   
   .resume-sidebar {
     flex: 0 0 300px;
+    position: sticky;
+    top: 120px; // Account for fixed header height
+    max-height: calc(100vh - 140px); // Leave some margin from header
+    overflow-y: auto;
+  }
+  
+  .resume-main {
+    flex: 1;
+    min-height: 100vh; // Ensure it has enough content to scroll
   }
 }
 
@@ -396,4 +416,4 @@ body {
       line-height: 1.6;
     }
   }
-} 
+}
