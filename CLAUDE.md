@@ -64,7 +64,9 @@ date: YYYY-MM-DD
 - Not shown in "Related posts"
 
 ### File Structure
-- `_posts/` - All posts (both types) with naming: `YYYY-MM-DD-title.md`
+- `_posts/` - All posts organized in subdirectories:
+  - `_posts/long-form/` - Long-form blog posts (`YYYY-MM-DD-title.md`)
+  - `_posts/bits/` - Short updates/bits (`YYYY-MM-DD-title.md`)
 - `_layouts/` - Page templates (default, home, post, page)
 - `_sass/` - Modular SCSS files
 - `_includes/` - Reusable HTML components (currently minimal)
@@ -168,14 +170,14 @@ Structure in `_layouts/home.html`:
 ### Creating a New Blog Post
 ```bash
 # Long-form post
-touch _posts/YYYY-MM-DD-title.md
+touch _posts/long-form/YYYY-MM-DD-title.md
 # Add frontmatter: layout: post, title: lowercase title, type: long-form
 ```
 
 ### Creating a Short Update (bit)
 ```bash
 # Short post
-touch _posts/YYYY-MM-DD-short-title.md
+touch _posts/bits/YYYY-MM-DD-short-title.md
 # Add frontmatter: layout: post, title: short title, type: short
 # Keep content to 2 sentences max
 ```
