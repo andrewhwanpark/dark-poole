@@ -1,11 +1,11 @@
 # Setup
-title: Giridhar Balachandran
+title: ctrlaltgiri
 url: https://ctrlaltgiri.github.io
-paginate: 1
+paginate: 10
 paginate_path: "/page:num/"
 baseurl: ""
 permalink: pretty
-tagline: Full-Stack Builder # Operator-Engineer
+tagline: Building in AI
 
 # Gems
 plugins:
@@ -43,5 +43,9 @@ version: 3.0.0
 
 # Navbar page list
 nav:
-  - title: Blog
-    url: /archive
+  - title: home
+    url: /
+  - title: thoughts
+    url: /blogs
+  - title: bits
+    url: /bits

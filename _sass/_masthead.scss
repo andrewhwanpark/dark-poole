@@ -3,7 +3,8 @@
 // Full-width black header with site name and navigation
 
 .masthead {
-  background-color: #000;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
   color: #fff;
   width: 100%;
   padding: 1.5rem 0;
@@ -12,7 +13,6 @@
   top: 0;
   left: 0;
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .masthead-container {
@@ -122,10 +122,10 @@
     text-decoration-style: unset;
     text-decoration-thickness: 0;
     color: #fff;
-    
-    
+    transition: opacity 0.2s ease;
+
     &:hover {
-      opacity: 0.8;
+      opacity: 0.6;
     }
   }
 }

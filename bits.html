@@ -1,0 +1,23 @@
+---
+layout: default
+title: bits
+---
+
+<div class="bits-container">
+  <h1 class="page-title">bits</h1>
+
+  {% assign shorts = site.posts | where: "type", "short" %}
+
+  {% if shorts.size == 0 %}
+    <p class="no-bits">No updates yet. Check back soon!</p>
+  {% else %}
+    <div class="bits-timeline">
+      {% for short in shorts %}
+        <div class="bit-item">
+          <time class="bit-date">{{ short.date | date: "%b %d, %Y" }}</time>
+          <div class="bit-content">{{ short.content }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

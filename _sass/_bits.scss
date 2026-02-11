@@ -1,0 +1,87 @@
+// Bits timeline styling
+.bits-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.bits-subtitle {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+
+.no-bits {
+  color: var(--gray-600);
+  font-style: italic;
+  text-align: center;
+  padding: 2rem;
+}
+
+.bits-timeline {
+  margin-top: 2rem;
+}
+
+.bit-item {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  border-bottom: 1px solid var(--border-color);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.02);
+  }
+}
+
+.bit-date {
+  display: block;
+  font-family: var(--code-font);
+  font-size: 0.85rem;
+  color: var(--text-muted, var(--gray-600));
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+  opacity: 0.6;
+
+  &:before {
+    content: "// ";
+    opacity: 0.4;
+  }
+}
+
+.bit-content {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--body-color);
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: var(--link-color);
+    text-decoration: underline;
+
+    &:hover {
+      color: var(--link-hover-color);
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 480px) {
+  .bits-container {
+    padding: 0 1rem;
+  }
+
+  .bit-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}

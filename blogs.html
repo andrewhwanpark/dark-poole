@@ -1,0 +1,35 @@
+---
+layout: default
+title: Blogs
+---
+
+<div class="blogs-container">
+  <h1 class="page-title">thoughts</h1>
+
+  {% assign long_form_posts = site.posts | where: "type", "long-form" %}
+
+  {% if long_form_posts.size == 0 %}
+    <p class="no-posts">No blog posts yet. Check back soon!</p>
+  {% else %}
+    {% for post in long_form_posts %}
+      <article class="post-preview">
+        <h2 class="post-preview-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h2>
+        <time class="post-preview-date">{{ post.date | date: "%B %d, %Y" }}</time>
+        <p class="post-preview-excerpt">
+          {% if post.excerpt %}
+            {{ post.excerpt | strip_html | truncatewords: 50 }}
+          {% else %}
+            {{ post.content | strip_html | truncatewords: 50 }}
+          {% endif %}
+        </p>
+        <a href="{{ post.url | relative_url }}" class="read-more">Read more</a>
+      </article>
+
+      {% unless forloop.last %}
+        <hr class="post-separator" />
+      {% endunless %}
+    {% endfor %}
+  {% endif %}
+</div>

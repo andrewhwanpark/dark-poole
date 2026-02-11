@@ -2,176 +2,34 @@
 layout: default
 ---
 
-<div class="introduction-section">
-  <div class="introduction-content">
-    <p class="intro-text">
-              
-      <div>
-        <div class="small gray">TL;DR </div>    
-          <p class="main-text">
-            <p class="main-text-item">AI that works in the wild.</p>
-            <p class="main-text-item">Obsessed with customer delight.</p>
-            <p class="main-text-item">Ship daily, fix fast, scale clean.</p>
-            <p class="main-text-item">Engineer, Operator, Builder.</p> 
-          </p>
-      </div>
-    </p>
-  </div>
-  
-  <!-- Scroll down arrow -->
-  <div class="scroll-arrow">
-    <span>↓</span>
-  </div>
-</div>
-
-<div class="resume-container">
-  <!-- Left Column - Personal Info -->
-  <div class="resume-sidebar">
-    <div class="personal-summary">
-      <p>5+ years of experience working in professional software development across Big Tech and startups.</p>
-      <br /> 
-      <p>I'm sort of like an "everything engineer". I can be cooking up a new experience today, rebuilding an analytics engine tomorrow and be working on the new AI product the next week. I learn on the job and I'm very quick to build.</p>
-      
-      <br />
-
-      <p>Currently I'm at Cornell University, pursuing a master's degree in Computer Science. I will graduate in May 2026. </p>
-
-      <div class="badges">
-        <div class="badge-row">
-          <img src="/assets/cornell-logo.png" class="badge" alt="Cornell" class="logo-image" />  
-          <img src="/assets/manipal-logo.png" class="badge" alt="Manipal" class="logo-image" />  
-          <img src="/assets/mvm-logo.png" class="badge" alt="Zamp" class="logo-image" />  
-        </div>
-      </div>
-    </div>
-
-    <div class="personal-summary">
-      <p>Previously I received a B.Tech in Computer Science and Engineering from Manipal University (Manipal campus) and did most of my schooling in Chennai.</p>
-    </div>
-    
-    <hr class="separator">
-    
-    <div class="contact-info">
-      <div class="contact-item">
-        <span>Email</span>
-        <span class="arrow">›</span> 
-      </div>
-      <hr class="separator">
-      <div class="contact-item">
-        <span>LinkedIn</span>
-        <span class="arrow">›</span>
-      </div>
-      <hr class="separator">
-      <div class="contact-item">
-        <span>GitHub</span>
-        <span class="arrow">›</span>
-      </div>
-      <hr class="separator">
+<div class="home-container">
+  <!-- Profile Section -->
+  <div class="profile-section">
+    <img src="https://github.com/ctrlaltgiri.png" alt="Profile Photo" class="profile-photo" />
+    <div class="profile-bio">
+      <p>building ai that actually works in production.</p>
     </div>
   </div>
 
-  <!-- Right Column - Experience -->
-  <div class="resume-main">
-    <h2 class="section-title">Experience</h2>
+  <!-- Latest Blog Posts Section -->
+  <div class="latest-posts-section">
 
-    
-    <div class="experience-item">
-      <div class="company-header">
-        <div class="company-logo">
-          <img src="/assets/microsoft-logo.png" alt="Microsoft" class="logo-image" />
-        </div>
-        <div class="company-info">
-          <h3 class="job-title">Microsoft</h3>
-          <div class="company-name">Software Engineer</div>
-        </div>
-      </div>
-      <div class="job-dates">January 2021 - December 2023</div>
-      <div class="job-location">Hyderabad</div>
-      <ul class="job-description">
-        <li>Dream come true, working for Microsoft as a first job. I was part of the team that built the Data Loss Prevention (DLP) system.</li>
-        <li>DLP uses a rule engine to identify sensitive data in Outlook emails, Teams chats, OneDrive files etc. I spent the first few months building out expertise in this rule engine by adding new predicates and actions.</li>
-        <li>Once I developed some trust with my manager (<a href="https://www.linkedin.com/in/shiva-shankar-96842b2/">Shiva Shankar Thagadurai</a> - who's the GOAT btw), I was given the first big task to break the schema constraint of the rule engine. I developed this in 6 months, which required a deep understanding of the stack across workloads. <a href="https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/new-dlpcompliancerule?view=exchange-ps#-advancedrule">Feature link</a></li>
-        <li>Post that, I worked on building a Near-Real-Time (NRT) system for Teams DLP. Previously Teams messages were scanned in batches, but with NRT, we could scan messages in real-time. First time worked with Redis, tiered caches and more to build a pipeline that scanned P99 messages in under 50ms.</li>
-        <li>Got tired of the slow moving, bureaucratic nature of the company. Wanted something more fast-paced, challenging.</li>
-      </ul>
-    </div>
-
-    <hr class="separator">
-
-    <div class="experience-item">
-      <div class="company-header">
-        <div class="company-logo">
-          <img src="/assets/zamp-logo.jpeg" alt="Zamp" class="logo-image" />
-        </div>
-        <div class="company-info">
-          <h3 class="job-title">Zamp</h3>
-          <div class="company-name">Engineer-Operator</div>
-        </div>
-      </div>
-      <div class="job-dates">December 2023 - July 2025</div>
-      <div class="job-location">Bengaluru / Gurgaon</div>
-      <ul class="job-description">
-        <li>Compared to the 6 months it took to ship a new configuration in Microsoft, Zamp went from feature idea to live in 6 hours. The pace of shipping was the first addiction I had.</li>
-        <li>I joined when Zamp was just building out the treasury management software. Worked closely with customers like Tabby, traveled to Dubai to meet them and build closely with them. Career-changing experiencese in terms of product understanding.</li>
-        <li>After my first project (which went well), I led a team for 6 months building one vertical of our TMS system - Cash Copilot, which was an analytical tool for cash management. <a href="https://zamp.ai/blogs/rebuilding-our-analytics">Wrote a blog about it.</a></li>
-        <li>For the next few months, I did sales outreach + hunting for new accounts in the EMEA and America region. The highs from email replies and even meetings were really high and there were days you doubted everything and if you could even sell. Even delved a little into marketing - built the landing page, SSO and rallied the team to write blogs.</li>
-        <li>When we pivoted to building enterprise AI agents, I was amongst the first engineers building out the platform. Built deep experience in Temporal, Evals, RAG systems and working with LLMs to build agents for customers like Uber and Wio Bank.</li>
-        <li>Left the company to pursue a master's degree at Cornell.</li>
-      </ul>
-    </div>
-
-    <hr class="separator">
-
-
-    <h2 class="section-title" style="padding-top: 4rem;">Stuff I've built</h2>
-  
-    <div class="experience-item">
-      <div class="company-header">
-        <div class="company-logo">
-          <img src="/assets/researchr-logo2.png" alt="Zamp" class="logo-image" />
-        </div>
-        <div class="company-info">
-          <h3 class="job-title">ResearchR <a style="font-size: 12px; text-decoration: none;" href="https://github.com/CtrlAltGiri/researchr" target="_blank">↗</a></h3>
-          <div class="company-name">Co-founder</div>
-        </div>
-      </div>
-      <div class="job-dates">January 2020 - December 2020</div>
-      <div class="job-location">Chennai</div>
-      <ul class="job-description">
-        <li>I struggled to find the right research opportunities during my undergrad and after talking to several peers, I realized that a lot of them faced the same too.</li>
-        <li>ResearchR was built as a platform to connect students and professors with the right research opportunities. Here's what it looked like for the <a href="https://youtu.be/hGryQDDDKTo" target="_blank">student</a> and for the <a href="https://youtu.be/nuCgpP4GFrE" target="_blank">professor.</a></li>
-        <li>We applied to YC and a some other incubators (<a href="https://youtu.be/yXkB82Cc4YI" target="_blank">YC video here</a>). We got accepted at IIT Madras' incubator and continued working there for a few months.</li>
-        <li>Eventually we stopped working on the project considering how professors from top universities used internal portals to manage their research opportunities and were unwilling to list on a 3P platform.</li>
-      </ul>
-    </div>
-
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+    {% assign long_form_posts = site.posts | where: "type", "long-form" %}
+    {% for post in long_form_posts limit: 3 %}
+      <article class="post-preview">
+        <h3 class="post-preview-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+        <time class="post-preview-date">{{ post.date | date: "%B %d, %Y" }}</time>
+        <p class="post-preview-excerpt">
+          {% if post.excerpt %}
+            {{ post.excerpt | strip_html | truncatewords: 30 }}
+          {% else %}
+            {{ post.content | strip_html | truncatewords: 30 }}
+          {% endif %}
+        </p>
+        <a href="{{ post.url | relative_url }}" class="read-more">Read more</a>
+      </article>
+    {% endfor %}
   </div>
 </div>
-<!-- 
-
-
-<script>
-// Hide scroll arrow when scrolling past introduction section
-window.addEventListener('scroll', function() {
-  const introSection = document.querySelector('.introduction-section');
-  const scrollArrow = document.querySelector('.scroll-arrow');
-  
-  if (introSection && scrollArrow) {
-    const introBottom = introSection.offsetTop + introSection.offsetHeight;
-    const scrollPosition = window.pageYOffset;
-    
-    if (scrollPosition > introBottom - window.innerHeight) {
-      scrollArrow.style.display = 'none';
-    } else {
-      scrollArrow.style.display = 'block';
-    }
-  }
-});
-</script>

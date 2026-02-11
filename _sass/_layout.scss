@@ -40,7 +40,28 @@ body.default.archive .body-container {
 /* Add padding for individual blog post pages */
 body.post .body-container {
   padding-top: 120px;
-  
+
+  /* Increase padding for taller stacked header on small screens */
+  @media (max-width: 480px) {
+    padding-top: 160px;
+  }
+}
+
+/* Add padding for home page */
+body.home .body-container {
+  padding-top: 120px;
+
+  /* Increase padding for taller stacked header on small screens */
+  @media (max-width: 480px) {
+    padding-top: 160px;
+  }
+}
+
+/* Add padding for blogs and bits pages */
+body.default.blogs .body-container,
+body.default.bits .body-container {
+  padding-top: 120px;
+
   /* Increase padding for taller stacked header on small screens */
   @media (max-width: 480px) {
     padding-top: 160px;

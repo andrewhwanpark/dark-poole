@@ -71,13 +71,32 @@
   }
 }
 
-// Dark Poole theme
+// Dark Poole theme - Minimal
 [data-theme="dark-poole"] {
-  --body-color: #fff;
-  --body-bg: #000;
-  --heading-color: #fff;
-  --link-color: #fff;
-  --link-hover-color: #ccc;
-  --border-color: rgba(255, 255, 255, 0.15);
-  --code-bg: #000;
+  // Background - pure black
+  --body-bg: #000000;
+  --body-bg-gradient: #000000;
+
+  // Text colors with hierarchy
+  --body-color: #cccccc;
+  --heading-color: #ffffff;
+  --text-muted: #666666;
+  --text-secondary: #999999;
+
+  // Minimal - just white
+  --accent-primary: #ffffff;
+  --accent-secondary: #cccccc;
+  --accent-glow: rgba(255, 255, 255, 0.1);
+
+  // Links - white/gray
+  --link-color: #ffffff;
+  --link-hover-color: #999999;
+
+  // Borders and dividers
+  --border-color: rgba(255, 255, 255, 0.1);
+  --border-accent: rgba(255, 255, 255, 0.15);
+
+  // Code
+  --code-bg: #000000;
+  --code-color: #ffffff;
 }
