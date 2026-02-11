@@ -51,7 +51,8 @@
 
   &:before {
     content: "// ";
-    opacity: 0.4;
+    color: var(--gray-600);
+    opacity: 0.9;
   }
 }
 

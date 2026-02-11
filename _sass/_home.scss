@@ -10,13 +10,6 @@
   text-align: center;
   margin-bottom: 4rem;
   padding: 2rem 0;
-
-  // Ensure everything is centered on mobile
-  @media (max-width: 480px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 }
 
 .profile-photo {
@@ -37,7 +30,7 @@
 }
 
 .profile-github {
-  display: block;
+  display: inline-block;
   text-align: center;
   color: var(--text-muted, #666);
   text-decoration: none;
@@ -201,9 +194,25 @@
     padding: 1rem;
   }
 
+  .profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-github {
+    display: inline-block;
+  }
+
   .profile-photo {
     width: 120px;
     height: 120px;
+  }
+
+  .profile-location,
+  .profile-tagline,
+  .profile-bio {
+    text-align: center;
   }
 
   .profile-bio p {

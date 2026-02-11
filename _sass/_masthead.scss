@@ -63,6 +63,10 @@
     text-decoration-line: none;
     text-decoration-style: unset;
     text-decoration-thickness: 0;
+
+    @media (max-width: 480px) {
+      text-align: center;
+    }
   }
 
   .subtitle {
