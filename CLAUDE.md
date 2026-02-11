@@ -115,14 +115,25 @@ Note: "thoughts" links to `/blogs` - the nav label is different from the URL for
 
 **Minimal Black & White**
 - Pure black background (#000), white text, gray accents
-- No colors, no gradients, no effects
+- NO COLORS - user specifically rejected blue/cyan accents, wants pure b&w
+- No gradients, no glows, no visual effects
 - Lowercase titles for blog posts and page headings
 - Simple hover states (opacity/color changes only)
+- Fast, smooth transitions (0.2-0.3s)
 
 **Typography**
 - Post titles: 1.5rem
 - All major headings and navigation: lowercase
 - Subtle spacing and transitions
+- Profile tagline/location text: 0.85rem, gray, minimal
+
+**User Preferences (from design sessions)**
+- Rejected colorful accents (specifically cyan/blue) - keep everything grayscale
+- Prefers "minimal and awesome" over flashy
+- Wants regular text capitalization (not ALL CAPS or Title Case)
+- Single line bio instead of multiple paragraphs
+- Tight spacing between elements (reduced gaps)
+- No decorative elements (dollar signs, extra symbols removed)
 
 ## Social & Engagement Features
 
@@ -152,10 +163,51 @@ Structure in `_layouts/home.html`:
 5. Bio line
 6. 3 latest blog posts
 
+## Common Tasks & Workflows
+
+### Creating a New Blog Post
+```bash
+# Long-form post
+touch _posts/YYYY-MM-DD-title.md
+# Add frontmatter: layout: post, title: lowercase title, type: long-form
+```
+
+### Creating a Short Update (bit)
+```bash
+# Short post
+touch _posts/YYYY-MM-DD-short-title.md
+# Add frontmatter: layout: post, title: short title, type: short
+# Keep content to 2 sentences max
+```
+
+### Testing Locally
+```bash
+bundle exec jekyll serve
+# Visit http://localhost:4000
+# Server auto-regenerates on file changes (except _config.yml)
+```
+
+### Deploying
+```bash
+git add -A
+git commit -m "description of changes
+
+Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>"
+git push origin gh-pages
+# GitHub Pages auto-deploys in 1-2 minutes
+```
+
+### Testing Social Previews
+- Twitter: https://cards-dev.twitter.com/validator
+- LinkedIn: https://www.linkedin.com/post-inspector/
+- Facebook: https://developers.facebook.com/tools/debug/
+
 ## Important Notes
 
 - **Pagination**: Configured to 10 posts per page, but Jekyll's `jekyll-paginate` doesn't support filtering by post type. Current implementation uses Liquid filters instead.
-- **GitHub Profile Photo**: Used throughout - home page, favicon, and social media previews
+- **GitHub Profile Photo**: Used throughout - home page, favicon, and social media previews (`https://github.com/ctrlaltgiri.png`)
 - **Branch Strategy**: Active branch is `gh-pages` (serves as both development and deployment)
 - **Baseurl**: Currently empty (`baseurl: ""`) since site is at root domain
 - **Images**: All blog post images are auto-centered via CSS in `_base.scss`
+- **Utterances**: Requires app installation at https://github.com/apps/utterances (one-time setup)
+- **Jekyll Server**: May need restart if changes to `_config.yml` don't appear (Ctrl+C then restart)
