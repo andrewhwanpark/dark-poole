@@ -98,21 +98,64 @@ SCSS is modular and imported in `styles.scss`:
 
 ## Navigation Configuration
 
-Edit `_config.yml` to modify navigation:
+Edit `_config.yml` to modify navigation (all lowercase):
 ```yaml
 nav:
-  - title: Home
+  - title: home
     url: /
-  - title: Blogs
+  - title: thoughts
     url: /blogs
   - title: bits
     url: /bits
 ```
 
+Note: "thoughts" links to `/blogs` - the nav label is different from the URL for better branding.
+
+## Design Philosophy
+
+**Minimal Black & White**
+- Pure black background (#000), white text, gray accents
+- No colors, no gradients, no effects
+- Lowercase titles for blog posts and page headings
+- Simple hover states (opacity/color changes only)
+
+**Typography**
+- Post titles: 1.5rem
+- All major headings and navigation: lowercase
+- Subtle spacing and transitions
+
+## Social & Engagement Features
+
+### Comments System (Utterances)
+- GitHub Issues-based comments on blog posts
+- Script in `_layouts/post.html`
+- Theme: `github-dark` to match site
+- Requires utterances app installed on GitHub repo: https://github.com/apps/utterances
+
+### Social Media Previews
+- Open Graph and Twitter Card meta tags in `_includes/head.html`
+- Always uses GitHub profile image: `https://github.com/ctrlaltgiri.png`
+- Auto-generates title and description from post content
+- Test with: Twitter Card Validator, LinkedIn Post Inspector
+
+### Footer Links
+- GitHub: https://github.com/ctrlaltgiri
+- LinkedIn: https://linkedin.com/in/giridharbalachandran
+- Email: gb555@cornell.edu
+
+### Home Page Profile
+Structure in `_layouts/home.html`:
+1. Profile photo (GitHub avatar)
+2. @ctrlaltgiri (linked to GitHub)
+3. Location/status line
+4. Tagline
+5. Bio line
+6. 3 latest blog posts
+
 ## Important Notes
 
 - **Pagination**: Configured to 10 posts per page, but Jekyll's `jekyll-paginate` doesn't support filtering by post type. Current implementation uses Liquid filters instead.
-- **GitHub Profile Photo**: Home page automatically fetches from `https://github.com/ctrlaltgiri.png`
-- **Bio Placeholder**: Update the TODO in `_layouts/home.html` lines 10-14
+- **GitHub Profile Photo**: Used throughout - home page, favicon, and social media previews
 - **Branch Strategy**: Active branch is `gh-pages` (serves as both development and deployment)
 - **Baseurl**: Currently empty (`baseurl: ""`) since site is at root domain
+- **Images**: All blog post images are auto-centered via CSS in `_base.scss`

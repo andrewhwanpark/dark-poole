@@ -8,26 +8,24 @@
     site.title }} {% endif %}
   </title>
 
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
-  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet"> -->
   <link rel="stylesheet" href="{{ 'styles.css' | relative_url }}">
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ '/assets/apple-touch-icon-precomposed.png' | relative_url }}">
-  <link rel="shortcut icon" href="{{ '/assets/favicon.ico' | relative_url }}">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://github.com/ctrlaltgiri.png">
+  <link rel="shortcut icon" href="https://github.com/ctrlaltgiri.png">
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ 'atom.xml' | relative_url }}">
-  <link rel="stylesheet" href="{{ 'styles.css' | relative_url }}" />
-  <link
-    rel="apple-touch-icon-precomposed"
-    sizes="144x144"
-    href="{{ '/assets/apple-touch-icon-precomposed.png' | relative_url }}"
-  />
-  <link rel="shortcut icon" href="{{ '/assets/favicon.ico' | relative_url }}" />
-  <link
-    rel="alternate"
-    type="application/atom+xml"
-    title="{{ site.title }}"
-    href="{{ 'atom.xml' | relative_url }}"
-  />
+
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}trying to keep up with everything happening in ai{% endif %}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="https://github.com/ctrlaltgiri.png">
+  <meta property="og:site_name" content="{{ site.title }}">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}trying to keep up with everything happening in ai{% endif %}">
+  <meta name="twitter:image" content="https://github.com/ctrlaltgiri.png">
 
   {% seo title=false %}
 </head>

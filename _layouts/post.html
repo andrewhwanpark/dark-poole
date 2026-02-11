@@ -18,6 +18,17 @@ layout: default
     {{ content }}
   </article>
 
+  <!-- Comments via utterances -->
+  <div class="comments">
+    <script src="https://utteranc.es/client.js"
+            repo="CtrlAltGiri/ctrlaltgiri.github.io"
+            issue-term="pathname"
+            theme="github-dark"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+
   {% if site.related_posts != empty %}
   <aside class="related">
     <h3>Related posts</h3>

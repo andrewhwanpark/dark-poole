@@ -37,6 +37,8 @@ a {
 img {
   display: block;
   max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: var(--spacer);
   border-radius: var(--border-radius);
 }

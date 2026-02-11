@@ -17,7 +17,7 @@
   height: 150px;
   border-radius: 50%;
   border: 2px solid var(--border-color);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -29,17 +29,46 @@
   }
 }
 
+.profile-github {
+  display: block;
+  text-align: center;
+  color: var(--text-muted, #666);
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--heading-color, #fff);
+  }
+}
+
+.profile-location {
+  text-align: center;
+  color: var(--text-muted, #666);
+  font-size: 0.85rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.profile-tagline {
+  text-align: center;
+  color: var(--text-muted, #666);
+  font-size: 0.85rem;
+  margin: 0 0 1rem 0;
+}
+
 .profile-bio {
   max-width: 600px;
-  margin: 0 auto;
-  color: var(--body-color);
+  margin: 1rem auto 0;
+  color: var(--text-secondary, #999999);
   line-height: 1.6;
 
   p {
-    margin: 0.5rem 0;
-    font-size: 1rem;
+    margin: 0;
+    font-size: 0.95rem;
     font-weight: normal;
     font-style: normal;
+    letter-spacing: 0.3px;
   }
 }
 
