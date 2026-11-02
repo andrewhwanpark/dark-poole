@@ -1,0 +1,108 @@
+---
+import '@fontsource/geist-mono/300.css';
+import '@fontsource/geist-mono/400.css';
+import '@fontsource/geist-mono/500.css';
+import '@fontsource/geist-sans/300.css';
+import '@fontsource/geist-sans/400.css';
+
+export interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#060606" />
+    <meta name="color-scheme" content="dark" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="shortcut icon" href="/assets/favicon.png" />
+    <link rel="alternate" type="application/atom+xml" title="Lemonochrome" href="/atom.xml" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --bg: #060606;
+    --ink: #e9e7e2;
+    --ink-2: rgba(233, 231, 226, 0.72);
+    --ink-3: rgba(233, 231, 226, 0.46);
+    --ink-4: rgba(233, 231, 226, 0.22);
+    --line: rgba(233, 231, 226, 0.12);
+    --sig: #ff3b1d;
+    --mono: 'Geist Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+    --sans: 'Geist Sans', 'Geist', ui-sans-serif, system-ui, sans-serif;
+    --m: clamp(16px, 3.4vw, 48px);
+    --gap: clamp(12px, 1.6vw, 24px);
+    --bar: 52px;
+    color-scheme: dark;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-padding-top: var(--bar);
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    font-feature-settings: 'ss01', 'tnum';
+    overflow-x: clip;
+  }
+
+  ::selection {
+    background: var(--sig);
+    color: #000;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  :focus-visible {
+    outline: 1px solid var(--sig);
+    outline-offset: 3px;
+  }
+
+  img,
+  canvas,
+  svg {
+    display: block;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+</style>
